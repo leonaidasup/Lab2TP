@@ -4,24 +4,30 @@
  */
 package com.mycompany.superhumanos.control;
 import com.mycompany.superhumanos.view.HumansInput;
+import com.mycompany.superhumanos.model.SuperHumanos;
+import java.util.ArrayList;
 
 /**
  *
  * @author Leonardo.amaris
  */
 public class HumansInputControl {
+    public static ArrayList<SuperHumanos> listSuperHumanos = new ArrayList<>();
+    public static HumansInput ventanaHumansInput = new HumansInput();
     
-    public static HumansInput ventana = new HumansInput();
-
     public HumansInputControl() {}
     
-    public void mostrar(){
-        ventana.setVisible(true);
+    public static void mostrar(){
+        ventanaHumansInput.setVisible(true);
     }
     
-    public void ocultar(){
-        ventana.setVisible(false);
+    public static void GuardarAction(String superNombre, int poderFuerza, boolean visionCalor, boolean visionRayorX, String Nombre, int edad, String estadoCivil, int hijos, String dni, int SaludMental){
+        listSuperHumanos.add(new SuperHumanos(superNombre, poderFuerza, visionCalor, visionRayorX, Nombre, edad, estadoCivil, hijos, dni, SaludMental));
     }
     
-    
+    public static void CerrarAction(){
+        ventanaHumansInput.setVisible(false);
+        MenuControl.setListSuperHerores(listSuperHumanos);
+        MenuControl.AdimitidosDenegadoList();
+    }
 }

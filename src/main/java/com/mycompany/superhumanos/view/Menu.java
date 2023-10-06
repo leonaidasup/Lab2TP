@@ -3,14 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.superhumanos.view;
-import com.mycompany.superhumanos.view.HumansInput;
+import com.mycompany.superhumanos.control.MenuControl;
 
 /**
  *
  * @author Leonardo.amaris
  */
 public class Menu extends javax.swing.JFrame {
-
     /**
      * Creates new form menu
      */
@@ -34,8 +33,8 @@ public class Menu extends javax.swing.JFrame {
         Admitidos = new javax.swing.JButton();
         Rechazados = new javax.swing.JButton();
         FormarEscuadrones = new javax.swing.JButton();
-        IngresarHumanos = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        Agregar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -47,12 +46,27 @@ public class Menu extends javax.swing.JFrame {
         });
 
         LlegadaAlFis.setText("Llegada");
+        LlegadaAlFis.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LlegadaAlFisActionPerformed(evt);
+            }
+        });
 
         MostrarAlFIs.setText("Mostrar");
+        MostrarAlFIs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MostrarAlFIsActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Llegada de AlFIs");
 
         Admitidos.setText("Admitidos");
+        Admitidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AdmitidosActionPerformed(evt);
+            }
+        });
 
         Rechazados.setText("Rechazados");
         Rechazados.addActionListener(new java.awt.event.ActionListener() {
@@ -68,32 +82,29 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        IngresarHumanos.setText("Ingresar");
-        IngresarHumanos.setHideActionText(true);
-        IngresarHumanos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        IngresarHumanos.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IngresarHumanosActionPerformed(evt);
-            }
-        });
-
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Ingresar Humano o SuperHumano");
+        jLabel1.setText("Grupo de SuperHumanos");
         jLabel1.setToolTipText("");
         jLabel1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        Agregar.setText("Agregar");
+        Agregar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addContainerGap(43, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(IngresarHumanos))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Agregar, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(Admitidos)
                         .addGap(18, 18, 18)
@@ -101,30 +112,28 @@ public class Menu extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addComponent(FormarEscuadrones))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
                         .addComponent(jLabel2)
-                        .addGap(24, 24, 24)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Guerra)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(LlegadaAlFis)
-                                .addGap(18, 18, 18)
-                                .addComponent(MostrarAlFIs)))))
-                .addGap(20, 20, 20))
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(Guerra, javax.swing.GroupLayout.DEFAULT_SIZE, 91, Short.MAX_VALUE)
+                            .addComponent(LlegadaAlFis, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(MostrarAlFIs, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(65, Short.MAX_VALUE)
+                .addContainerGap(44, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(IngresarHumanos))
+                    .addComponent(Agregar))
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Admitidos)
                     .addComponent(Rechazados)
                     .addComponent(FormarEscuadrones))
-                .addGap(36, 36, 36)
+                .addGap(57, 57, 57)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(LlegadaAlFis)
@@ -138,63 +147,38 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void GuerraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuerraActionPerformed
-        // TODO add your handling code here:
+        MenuControl.GuerraAction();
     }//GEN-LAST:event_GuerraActionPerformed
 
     private void RechazadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RechazadosActionPerformed
-        // TODO add your handling code here:
+        MenuControl.RechazadosAction();
     }//GEN-LAST:event_RechazadosActionPerformed
 
     private void FormarEscuadronesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FormarEscuadronesActionPerformed
-        // TODO add your handling code here:
+        MenuControl.FormarEscuadronesAction();
     }//GEN-LAST:event_FormarEscuadronesActionPerformed
 
-    private void IngresarHumanosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IngresarHumanosActionPerformed
-        HumansInput humanInputPanel = new HumansInput();
-        
-    }//GEN-LAST:event_IngresarHumanosActionPerformed
+    private void AdmitidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AdmitidosActionPerformed
+        MenuControl.AdmitidosAction();
+    }//GEN-LAST:event_AdmitidosActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Menu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+    private void LlegadaAlFisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LlegadaAlFisActionPerformed
+        MenuControl.LlegadaAlFisAction();
+    }//GEN-LAST:event_LlegadaAlFisActionPerformed
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Menu().setVisible(true);
-            }
-        });
-    }
+    private void MostrarAlFIsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MostrarAlFIsActionPerformed
+        MenuControl.MostrarAlFIsAction();
+    }//GEN-LAST:event_MostrarAlFIsActionPerformed
+
+    private void AgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarActionPerformed
+        MenuControl.AgregarAction();
+    }//GEN-LAST:event_AgregarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Admitidos;
+    private javax.swing.JButton Agregar;
     private javax.swing.JButton FormarEscuadrones;
     private javax.swing.JButton Guerra;
-    private javax.swing.JButton IngresarHumanos;
     private javax.swing.JButton LlegadaAlFis;
     private javax.swing.JButton MostrarAlFIs;
     private javax.swing.JButton Rechazados;

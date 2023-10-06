@@ -1,9 +1,12 @@
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/view/SuperInput.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/view/HumansInput.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/view/Menu.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/model/SuperHumanos.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/view/War.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/control/CrearSuperHumanos.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/model/Persona.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/control/GuardarSuperHumanos.java
-/home/estudiantes/Leonardo.amaris/Desktop/Tarea/src/main/java/com/mycompany/superhumanos/model/Poderes.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\view\Menu.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\model\AlFi.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\model\SuperHumanos.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\control\MenuControl.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\view\PruebasFIsicasMentales.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\control\WarControl.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\model\Persona.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\control\PruebasFisicasMentalesControl.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\view\HumansInput.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\model\Poderes.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\view\War.java
+C:\Users\leona\OneDrive\Escritorio\2023-2\Tecnicas\Laboratorio 2\Lab2TP\src\main\java\com\mycompany\superhumanos\control\HumansInputControl.java

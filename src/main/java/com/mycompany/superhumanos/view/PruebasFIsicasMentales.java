@@ -36,9 +36,10 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         Aceptar = new javax.swing.JButton();
-        CerrarPruebas = new javax.swing.JButton();
+        Cerrar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
+        setUndecorated(true);
 
         jLabel1.setText("Pruebas fisicas y mentales");
 
@@ -57,10 +58,10 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
             }
         });
 
-        CerrarPruebas.setText("Cerrar");
-        CerrarPruebas.addActionListener(new java.awt.event.ActionListener() {
+        Cerrar.setText("Cerrar");
+        Cerrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CerrarPruebasActionPerformed(evt);
+                CerrarActionPerformed(evt);
             }
         });
 
@@ -74,11 +75,7 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
                 .addGap(109, 109, 109))
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Aceptar)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(CerrarPruebas))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel2)
@@ -90,8 +87,13 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
                             .addComponent(jTextField1)
                             .addComponent(jTextField2)
                             .addComponent(jTextField3)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jTextField4, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Aceptar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Cerrar)
+                        .addGap(31, 31, 31))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -114,11 +116,11 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Aceptar)
-                    .addComponent(CerrarPruebas))
-                .addGap(29, 29, 29))
+                    .addComponent(Cerrar))
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -128,9 +130,9 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_AceptarActionPerformed
 
-    private void CerrarPruebasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarPruebasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_CerrarPruebasActionPerformed
+    private void CerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CerrarActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_CerrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,7 +172,7 @@ public class PruebasFIsicasMentales extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Aceptar;
-    private javax.swing.JButton CerrarPruebas;
+    private javax.swing.JButton Cerrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

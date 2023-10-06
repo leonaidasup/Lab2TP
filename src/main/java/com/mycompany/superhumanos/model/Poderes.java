@@ -9,6 +9,7 @@ package com.mycompany.superhumanos.model;
  * @author Leonardo.amaris
  */
 public interface Poderes {
-    public String superFuerza();
-    public String superVelocidad();
+    public String Fuerza();
+    public String VisionCalor();
+    public String VisionRayosX();
 }

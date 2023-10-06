@@ -10,26 +10,56 @@ package com.mycompany.superhumanos.model;
  */
 public class SuperHumanos extends Persona implements Poderes{
     private final String superNombre;
-    private final int poderFuerza;
-    private final int poderVelocidad;
-    public SuperHumanos(String Nombre, int edad, String estadoCivil, 
-            double disponibilidad, String superNombre, int poderFuerza, 
-            int poderVelocidad) {
-        super(Nombre, edad, estadoCivil, disponibilidad);
+    private final int Fuerza;
+    private final boolean visionCalor;
+    private final boolean visionRayorX;
+    private final int saludMental;
+    public SuperHumanos(String superNombre, int poderFuerza, boolean visionCalor, boolean visionRayorX, String Nombre, int edad, String estadoCivil, int hijos, String dni, int saludMental) {
+        super(Nombre, edad, estadoCivil, hijos, dni);
         this.superNombre = superNombre;
-        this.poderFuerza = poderFuerza;
-        this.poderVelocidad = poderVelocidad;
+        this.Fuerza = poderFuerza;
+        this.visionCalor = visionCalor;
+        this.visionRayorX = visionRayorX;
+        this.saludMental = saludMental;
     }
+
+    public String getSuperNombre() {
+        return superNombre;
+    }
+
+    public int getFuerza() {
+        return Fuerza;
+    }
+
+    public boolean isVisionCalor() {
+        return visionCalor;
+    }
+
+    public boolean isVisionRayorX() {
+        return visionRayorX;
+    }
+
+    public int getSaludMental() {
+        return saludMental;
+    }
+
     @Override
-    public String superFuerza() {
-        return "La super fuerza de " + this.superNombre + " es: " + this.poderFuerza;
+    public String Fuerza() {
+        return "Fuerza";
     }
+
     @Override
-    public String superVelocidad() {
-        return "La super velocidad de " + this.superNombre + " es: " + this.poderVelocidad;
+    public String VisionCalor() {
+        return "VisionCalor";
     }
+
+    @Override
+    public String VisionRayosX() {
+        return "Vision Rayos X";
+    }
+
     @Override
     public String toString() {
-        return "SuperHerore = " + superNombre + ", poderFuerza = " + poderFuerza + ", poderVelocidad = " + poderVelocidad;
-    }
+        return "SuperNombre=" + superNombre + ", Fuerza=" + Fuerza + ", visionCalor=" + visionCalor + ", visionRayorX=" + visionRayorX + '}';
+    } 
 }

@@ -12,32 +12,53 @@ class Persona {
     private final String Nombre;
     private int edad;
     private String estadoCivil;
-    private double disponibilidad;
-    public Persona(String Nombre, int edad, String estadoCivil, double disponibilidad) {
+    private int hijos;
+    private String dni;
+
+    public Persona(String Nombre, int edad, String estadoCivil, int hijos, String dni) {
         this.Nombre = Nombre;
         this.edad = edad;
         this.estadoCivil = estadoCivil;
-        this.disponibilidad = disponibilidad;
+        this.hijos = hijos;
+        this.dni = dni;
     }
+
     public String getNombre() {
         return Nombre;
     }
+
     public int getEdad() {
         return edad;
     }
+
     public void setEdad(int edad) {
         this.edad = edad;
     }
+
     public String getEstadoCivil() {
         return estadoCivil;
     }
+
     public void setEstadoCivil(String estadoCivil) {
         this.estadoCivil = estadoCivil;
     }
-    public double getDisponibilidad() {
-        return disponibilidad;
+
+    public int getHijos() {
+        return hijos;
     }
-    public void setDisponibilidad(double disponibilidad) {
-        this.disponibilidad = disponibilidad;
-    }   
+
+    public void setHijos(int hijos) {
+        this.hijos = hijos;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+    
+    
+   
 }
