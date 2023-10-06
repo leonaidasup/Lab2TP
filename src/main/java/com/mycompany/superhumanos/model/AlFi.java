@@ -9,13 +9,19 @@ package com.mycompany.superhumanos.model;
  * @author leona
  */
 public class AlFi {
-    public final String nombre;
+    public final int tamano;
 
-    public AlFi(String nombre) {
-        this.nombre = nombre;
+    public AlFi(int tamano) {
+        this.tamano = tamano;
     }
 
-    public String getNombre() {
-        return nombre;
+    public int getTamano() {
+        return tamano;
     }
+
+    @Override
+    public String toString() {
+        return "AlFi tamaño = " + tamano;
+    }
+
 }

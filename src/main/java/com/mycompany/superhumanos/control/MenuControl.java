@@ -15,15 +15,19 @@ import javax.swing.JOptionPane;
  */
 public class MenuControl {
     private static ArrayList <SuperHumanos> listSuperHerores;
-    private static ArrayList <SuperHumanos> listaAdmitidos = new ArrayList<>();
-    private static ArrayList <SuperHumanos> listaRechazados = new ArrayList<>();
-    private static ArrayList <AlFi> listaAlFis = new ArrayList<>();
+    private static final ArrayList <SuperHumanos> listaAdmitidos = new ArrayList<>();
+    private static final ArrayList <SuperHumanos> listaRechazados = new ArrayList<>();
+    private static ArrayList <AlFi> listaAlFis;
     private static final Menu ventanaMenu = new Menu();
 
     public MenuControl() {}  
     
     public static void setListSuperHerores(ArrayList<SuperHumanos> lista) {
         MenuControl.listSuperHerores = lista;
+    }
+    
+    public static void setlistaAlFis(ArrayList <AlFi> listaAlFis){
+        MenuControl.listaAlFis = listaAlFis;
     }
     
     public static void mostrar(){
@@ -35,12 +39,7 @@ public class MenuControl {
     }
     
     public static void GuerraAction(){
-        WarControl.mostrar();
-    }
-    
-    public static void RechazadosAction(){
-        System.out.println(listSuperHerores);
-        JOptionPane.showMessageDialog(null, "Rechazados");
+        new WarControl(listSuperHerores, listaAlFis).mostrar();
     }
     
     public static void FormarEscuadronesAction(){
@@ -57,18 +56,41 @@ public class MenuControl {
         }
     }
     
+    public static void mostrarLista(ArrayList list){
+        String txt = "";
+        for (Object item: list){
+            txt = txt + "\n" + item.toString();
+        }
+        JOptionPane.showMessageDialog(null, txt);
+    }
+    
     public static void AdmitidosAction(){
-        System.out.println(listSuperHerores);
-        JOptionPane.showMessageDialog(null, "Admitidos");
+        mostrarLista(listaAdmitidos);
+    }
+    
+    public static void RechazadosAction(){
+        if (!listaRechazados.isEmpty()){
+            mostrarLista(listaRechazados);
+        } else {
+            JOptionPane.showMessageDialog(null, "No hay Super Heroes rechazados.");
+        }
     }
     
     public static void LlegadaAlFisAction(){
-        
-        JOptionPane.showMessageDialog(null, "Legada de los AlFis");
+        while (true) {
+            int altura = Integer.parseInt(JOptionPane.showInputDialog(null, "Altura de los AlFis:"));
+            if (altura > 10){
+                listaAlFis.add(new AlFi(altura));
+            }
+            if (listaAlFis.size() == 10){
+                break;
+            }
+        }
+        JOptionPane.showMessageDialog(null, "Llegada de los AlFis");
     }
     
     public static void MostrarAlFIsAction(){
-        JOptionPane.showMessageDialog(null, "AlFis");
+        mostrarLista(listaAlFis);
     }
     
     public static void main(String[] args) {

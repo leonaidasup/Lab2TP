@@ -3,28 +3,31 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.superhumanos.control;
+import com.mycompany.superhumanos.model.AlFi;
+import com.mycompany.superhumanos.model.SuperHumanos;
 import com.mycompany.superhumanos.view.War;
+import java.util.ArrayList;
 
 /**
  *
  * @author leona
  */
 public class WarControl {
-    
-    public static War ventanaWar = new War();
+    private ArrayList <SuperHumanos> listSuperHerores;
+    private ArrayList <AlFi> listaAlFis;
+    public War ventanaWar = new War();
 
-    public WarControl() {}
-    
-    public static void mostrar(){
-        ventanaWar.setVisible(true);
+    public WarControl(ArrayList<SuperHumanos> listSuperHerores, ArrayList<AlFi> listaAlFis) {
+        this.listSuperHerores = listSuperHerores;
+        this.listaAlFis = listaAlFis;
+    }
+ 
+    public void mostrar(){
+        this.ventanaWar.setVisible(true);
     }
     
-    public static void ocultar(){
-        ventanaWar.setVisible(false);
-    }
-    
-    public static void main(String[] args) {
-        mostrar();
+    public void ocultar(){
+        this.ventanaWar.setVisible(false);
     }
     
 }
