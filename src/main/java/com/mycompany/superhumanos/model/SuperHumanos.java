@@ -60,6 +60,6 @@ public class SuperHumanos extends Persona implements Poderes{
 
     @Override
     public String toString() {
-        return "SuperNombre=" + superNombre + ", Fuerza=" + Fuerza + ", visionCalor=" + visionCalor + ", visionRayorX=" + visionRayorX + '}';
+        return "SuperNombre=" + superNombre + ", Fuerza=" + Fuerza + ", visionCalor=" + visionCalor + ", visionRayorX=" + visionRayorX;
     } 
 }

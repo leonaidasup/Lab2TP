@@ -7,6 +7,7 @@ import com.mycompany.superhumanos.model.SuperHumanos;
 import com.mycompany.superhumanos.view.Menu;
 import com.mycompany.superhumanos.model.AlFi;
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 
 /**
@@ -15,9 +16,11 @@ import javax.swing.JOptionPane;
  */
 public class MenuControl {
     private static ArrayList <SuperHumanos> listSuperHerores;
+    private static List <SuperHumanos> listSuperHeroresEscuadron1;
+    private static List <SuperHumanos> listSuperHeroresEscuadron2;
     private static final ArrayList <SuperHumanos> listaAdmitidos = new ArrayList<>();
     private static final ArrayList <SuperHumanos> listaRechazados = new ArrayList<>();
-    private static ArrayList <AlFi> listaAlFis;
+    private static ArrayList <AlFi> listaAlFis = new ArrayList<>();
     private static final Menu ventanaMenu = new Menu();
 
     public MenuControl() {}  
@@ -39,11 +42,22 @@ public class MenuControl {
     }
     
     public static void GuerraAction(){
-        new WarControl(listSuperHerores, listaAlFis).mostrar();
+        WarControl.setListSuperHerores1(listSuperHeroresEscuadron1);
+        WarControl.setListSuperHerores2(listSuperHeroresEscuadron2);
+        WarControl.setListaAlFis(listaAlFis);
+        WarControl.mostrar();
     }
     
     public static void FormarEscuadronesAction(){
-        JOptionPane.showMessageDialog(null, "Escuadrones listos");
+        int tam = listaAdmitidos.size();
+        if (tam >= 20){
+            listSuperHeroresEscuadron1 = listaAdmitidos.subList(0,10);
+            listSuperHeroresEscuadron2 =listaAdmitidos.subList(10, tam-1);
+            JOptionPane.showMessageDialog(null, "Escuadrones listos");
+        } else {
+            JOptionPane.showMessageDialog(null, "Faltan " + (20 - tam) + " superHeroes.");
+        }
+        
     }
     
     public static void AdimitidosDenegadoList(){
@@ -59,7 +73,7 @@ public class MenuControl {
     public static void mostrarLista(ArrayList list){
         String txt = "";
         for (Object item: list){
-            txt = txt + "\n" + item.toString();
+            txt = txt + item.toString() + "\n" ;
         }
         JOptionPane.showMessageDialog(null, txt);
     }

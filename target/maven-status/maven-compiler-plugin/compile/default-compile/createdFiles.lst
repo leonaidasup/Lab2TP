@@ -17,6 +17,7 @@ com\mycompany\superhumanos\view\HumansInput.class
 com\mycompany\superhumanos\view\War$1.class
 com\mycompany\superhumanos\view\Menu$1.class
 com\mycompany\superhumanos\view\Menu$4.class
+com\mycompany\superhumanos\view\War$4.class
 com\mycompany\superhumanos\view\Menu.class
 com\mycompany\superhumanos\model\SuperHumanos.class
 com\mycompany\superhumanos\control\WarControl.class
